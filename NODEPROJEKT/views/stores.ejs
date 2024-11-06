@@ -1,0 +1,38 @@
+<%- include('includes/head') %>
+
+    <link rel="stylesheet" href="/css/store.css">
+</head>
+
+<body>
+    <%- include('includes/navigation') %>
+
+    <main>
+        <% if (prods.length > 0) { %>
+            <h1>Stores</h1>
+            <p>List of all the stores...</p>
+            <div class="grid">
+                <% for (let store of prods) { %>
+                <article class="card store-item">
+                    <header class="card__header">
+                        <h1 class="store__title"><%= store.title %></h1>
+                    </header>
+                    <div class="card__image">
+                        <img src="https://www.arkadszeged.hu/fileadmin/user_upload/CENTERS/ASZ/center/Szeged_LOGO_weiss_rot.svg" alt="Arkad logo">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="store__open">7:00-21:00</h2>
+                        <p class="store__description">Large area shopping centre</p>
+                    </div>
+                    <div class="card__actions">
+                        <button class="btn">Open</button>
+                        <button class="btn">Edit</button>
+                        <button class="btn">Delete</button>
+                    </div>
+                </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Store Found</h1>
+        <% } %>
+    </main>
+<%- include('includes/end') %>

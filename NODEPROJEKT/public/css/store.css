@@ -1,0 +1,25 @@
+.store-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.store-item {
+    width: 20rem;
+    max-width: 95%;
+}
+
+.store__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.store__price {
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 0.5rem;
+}
+
+.store__description {
+    text-align: center;
+}

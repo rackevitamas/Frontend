@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Ez az én saját APIm, amit tesztelésre hoztam létre",
+    "title": "Felhasználók API",
     "version": "1.0.0",
-    "description": "APIIIIIIIIIIIIII"
+    "description": "Felhasználók lekérés API alapján!"
   },
   "host": "localhost:3000",
   "basePath": "/api/users",
@@ -13,15 +13,15 @@
   "paths": {
     "/": {
       "get": {
-        "description": "Returns all users",
+        "description": "Lekérni az összes felhasználót!",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sikeresen lekért az összes felhasználót!"
           }
         }
       },
       "post": {
-        "description": "Creates a new user",
+        "description": "Létrehozni a felhasználót!",
         "parameters": [
           {
             "name": "body",
@@ -30,16 +30,16 @@
               "type": "object",
               "properties": {
                 "firstname": {
-                  "example": "James"
+                  "example": "Kinga"
                 },
                 "lastname": {
-                  "example": "Bond"
+                  "example": "Horváth"
                 },
                 "email": {
-                  "example": "james.bond@mi6.uk"
+                  "example": "horvath.kinga@mail.com"
                 },
                 "class": {
-                  "example": "12.B"
+                  "example": "1/13.B"
                 }
               }
             }
@@ -47,14 +47,14 @@
         ],
         "responses": {
           "201": {
-            "description": "Created"
+            "description": "Létrehozott!"
           }
         }
       }
     },
     "/{email}": {
       "get": {
-        "description": "Returns a user by email",
+        "description": "Email alapján lekérni a felhasználót!",
         "parameters": [
           {
             "name": "email",
@@ -65,15 +65,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sikeresen lekértél az email alapján felhasználót!"
           },
           "404": {
-            "description": "Not Found"
+            "description": "Nincs találat!"
           }
         }
       },
       "put": {
-        "description": "Az email alapján megadott user adatait módosítja",
+        "description": "Email alapján modósítani a felhasználót!",
         "parameters": [
           {
             "name": "email",
@@ -88,16 +88,13 @@
               "type": "object",
               "properties": {
                 "firstname": {
-                  "example": "James"
+                  "example": "Kinga"
                 },
                 "lastname": {
-                  "example": "Bond"
-                },
-                "email": {
-                  "example": "james.bond@mi6.uk"
+                  "example": "Horváth"
                 },
                 "class": {
-                  "example": "12.B"
+                  "example": "1/13.B"
                 }
               }
             }
@@ -105,18 +102,18 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sikeresen az email alapján modósítani a felhasználót!"
           },
           "404": {
-            "description": "Not Found"
+            "description": "Nincs találat!"
           }
         }
       },
       "delete": {
-        "description": "Deletes a user by email",
+        "description": "Email alapján törlés a felhasználót!",
         "parameters": [
           {
-            "name": "id",
+            "name": "email",
             "in": "path",
             "required": true,
             "type": "string"
@@ -124,10 +121,10 @@
         ],
         "responses": {
           "204": {
-            "description": "No Content"
+            "description": "Nincs kontextus"
           },
           "404": {
-            "description": "Not Found"
+            "description": "Nincs találat!"
           }
         }
       }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background: #0DCAF0;
+        }
+        img {
+            width: 100%;
+            height: 50%;
+        }
+        .lap{
+            height: 400px;
+        }
+        .elso{
+            padding: 0px;
+        }
+    </style>
+    <title>Toys</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-text text-white">Toy Shop</span>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="#">Contact</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card m-3 lap">
+                    <div class="card-body elso">
+                        <img src="./mclaren-750s-driving-dynamic-hero-1920x774px.jpg" alt="Car">
+                        <h4 style="padding: 5px;">Toy Car</h4>
+                        <p style="margin: 5px;">A fun toy car for all ages. Perfect for young adventures!</p>
+                        <p class="fw-bold fs-5"><span class="text-danger" style="margin: 5px;">$15.99</span> <span class="text-decoration-line-through">$29.99</span></p>
+                        <button class="btn btn-primary" style="margin: 5px;">Buy now!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-3 bg-secondary lap">
+                    <div class="card-body">
+                        <img src="./71u1t2blAjS.jpg" alt="Blocks" style="height: 35%; ">
+                        <h3 class="text-white">Building Blocks</h3>
+                        <p class="text-white">Enchance creativity with this set of corolful building blocks!</p>
+                        <p class="text-white fw-bold">$24.99</p>
+                        <button class="btn btn-light">Buy now!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-3 bg-warning lap">
+                    <div class="card-body">
+                        <h3 class="">Dollhouse</h3>
+                        <p class="">A beatiful dollhouse for hours of imaginative play!</p>
+                        <p class="fw-bold">$39.99</p>
+                        <button class="btn btn-dark">Buy now!</button>
+                        <img src="./beacon-dollhouse__22307.jpg" alt="DollHouse" style="height: 26%; margin-top: 10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
